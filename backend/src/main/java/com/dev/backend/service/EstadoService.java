@@ -3,8 +3,6 @@ import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import com.dev.backend.entity.Estado;
 import com.dev.backend.repository.EstadoRepository;
 

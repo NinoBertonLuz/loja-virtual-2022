@@ -3,8 +3,6 @@ import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import com.dev.backend.entity.Marca;
 import com.dev.backend.repository.MarcaRepository;
 
@@ -19,14 +17,14 @@ public class MarcaService {
 
     }
 
-    public MarcaService inserir(Marca marca){
+    public Marca inserir(Marca marca){
         marca.setDataCriacao(new Date());
         Marca marcaNova = marcaRepository.saveAndFlush(marca);
         return marcaNova;
 
     }
 
-    public MarcaService alterar(Marca marca){
+    public Marca alterar(Marca marca){
         marca.setDataAtualizacao(new Date());
         return marcaRepository.saveAndFlush(marca);
 

@@ -41,5 +41,6 @@ public class CategoriaController {
     public ResponseEntity<Void> excluir(@PathVariable("id") Long id){
         categoriaService.excluir(id);
         return ResponseEntity.ok().build();
+    }  
         
 }
