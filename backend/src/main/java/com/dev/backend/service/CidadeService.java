@@ -27,15 +27,12 @@ public class CidadeService {
 
     public Cidade alterar(Cidade cidade){
         cidade.setDataAtualizacao(new Date());
-        return cidadeRepository.saveAndFlush(cidade);
-        
-
+        return cidadeRepository.saveAndFlush(cidade); 
     }
 
     public void excluir(Long id){
         Cidade cidade = cidadeRepository.findById(id).get();
         cidadeRepository.delete(cidade);
-
     }
 
 }
